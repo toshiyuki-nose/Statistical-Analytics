@@ -1,0 +1,51 @@
+"""Generate the dataset used in Chapter 05: Data Visualization."""
+
+from pathlib import Path
+import pandas as pd
+
+
+def find_project_root() -> Path:
+    current_dir = Path.cwd().resolve()
+    for candidate in [current_dir, *current_dir.parents]:
+        if (candidate / "data").is_dir():
+            return candidate
+    return Path(__file__).resolve().parents[2]
+
+
+def generate_dataset() -> pd.DataFrame:
+    rows = [
+        ("Country_01","Region_A",8.2,48,62000,82.1),("Country_02","Region_A",6.5,42,54000,80.4),
+        ("Country_03","Region_A",12.0,39,47000,79.8),("Country_04","Region_A",4.1,51,68000,83.0),
+        ("Country_05","Region_A",15.4,36,43000,78.9),("Country_06","Region_A",7.8,45,59000,81.5),
+        ("Country_07","Region_A",20.2,34,40000,78.2),("Country_08","Region_A",10.6,41,51000,80.1),
+        ("Country_09","Region_B",25.0,31,36000,76.8),("Country_10","Region_B",32.4,28,31000,75.2),
+        ("Country_11","Region_B",18.5,35,39000,77.4),("Country_12","Region_B",40.1,24,27000,73.9),
+        ("Country_13","Region_B",22.8,33,35000,76.1),("Country_14","Region_B",35.6,27,30000,74.8),
+        ("Country_15","Region_B",28.3,30,33000,75.7),("Country_16","Region_B",45.0,22,25000,72.9),
+        ("Country_17","Region_C",55.0,19,21000,71.2),("Country_18","Region_C",62.5,17,18000,69.8),
+        ("Country_19","Region_C",48.3,21,23000,72.0),("Country_20","Region_C",70.4,15,16000,68.7),
+        ("Country_21","Region_C",52.1,20,22000,71.5),("Country_22","Region_C",80.0,13,14000,67.4),
+        ("Country_23","Region_C",66.2,16,17000,69.1),("Country_24","Region_C",58.7,18,20000,70.6),
+        ("Country_25","Region_D",90.0,11,12000,66.2),("Country_26","Region_D",105.0,9,10000,64.8),
+        ("Country_27","Region_D",82.3,12,13000,67.0),("Country_28","Region_D",120.0,7,8500,63.5),
+        ("Country_29","Region_D",95.4,10,11000,65.6),("Country_30","Region_D",135.0,6,7500,62.4),
+        ("Country_31","Region_D",110.2,8,9500,64.1),("Country_32","Region_D",88.8,11,12500,66.5),
+    ]
+    return pd.DataFrame(rows, columns=[
+        "country_id","region","population_million","median_age",
+        "gdp_per_capita_usd","life_expectancy"
+    ])
+
+
+def main() -> None:
+    project_root = find_project_root()
+    output_path = project_root / "data" / "05_data_visualization.csv"
+    df = generate_dataset()
+    df.to_csv(output_path, index=False, encoding="utf-8")
+    print(f"Created: {output_path}")
+    print(f"Rows: {len(df)}")
+    print(df.head())
+
+
+if __name__ == "__main__":
+    main()
