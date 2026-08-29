@@ -1,0 +1,5 @@
+distribution,scenario,n_trials,success_probability
+Bernoulli,Delivery arrives on time,1,0.8
+Binomial,On-time deliveries among 10 deliveries,10,0.8
+Binomial,Successful inspections among 8 inspections,8,0.7
+Binomial,Customers who purchase among 12 visitors,12,0.25

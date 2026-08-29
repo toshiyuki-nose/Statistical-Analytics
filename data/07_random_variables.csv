@@ -1,0 +1,5 @@
+delayed_deliveries,probability,description
+0,0.35,No delayed deliveries
+1,0.45,One delayed delivery
+2,0.15,Two delayed deliveries
+3,0.05,Three delayed deliveries
