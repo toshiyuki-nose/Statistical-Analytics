@@ -57,6 +57,19 @@ Statistical-Analytics/
 
 ---
 
+# Progress
+
+**15 / 24 chapters completed**
+
+- Part 1 — Descriptive Statistics: Completed
+- Part 2 — Probability: Completed
+- Part 3 — Statistical Inference: Completed
+- Part 4 — Relationship Between Variables: Next
+
+**Next Chapter:** 16. Covariance ← Next
+
+---
+
 # Learning Roadmap
 
 ## Part 0 — Environment Setup
@@ -65,7 +78,7 @@ Statistical-Analytics/
 
 ---
 
-## Part 1 — Descriptive Statistics
+## Part 1 — Descriptive Statistics ✅
 
 01. Data and Variables
 
@@ -93,7 +106,7 @@ Statistical-Analytics/
 
 ---
 
-## Part 2 — Probability
+## Part 2 — Probability ✅
 
 06. Probability Basics
 
@@ -105,7 +118,7 @@ Statistical-Analytics/
 
 ---
 
-## Part 3 — Statistical Inference
+## Part 3 — Statistical Inference ✅
 
 10. Sampling
 
@@ -121,9 +134,9 @@ Statistical-Analytics/
 
 ---
 
-## Part 4 — Relationship Between Variables
+## Part 4 — Relationship Between Variables 🚧
 
-16. Covariance
+16. Covariance ← Next
 
 17. Correlation Analysis
 
